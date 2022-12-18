@@ -1,0 +1,30 @@
+{
+  "name": "zeos_orchard",
+  "collaborators": [
+    "Sean Bowe <sean@electriccoin.co>",
+    "Jack Grigg <jack@electriccoin.co>",
+    "Daira Hopwood <daira@jacaranda.org>",
+    "Ying Tong Lai <yingtong@electriccoin.co>",
+    "Kris Nuttycombe <kris@electriccoin.co>",
+    "Matthias Schönebeack <matthias.schoenebeck@gmail.com"
+  ],
+  "description": "The ZEOS-Orchard for private transactions on the EOS blockchain",
+  "version": "0.2.0",
+  "license": "SEE LICENSE IN LICENSE-BOSL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mschoenebeck/zeos-orchard"
+  },
+  "files": [
+    "zeos_orchard_bg.wasm",
+    "zeos_orchard.js",
+    "zeos_orchard.d.ts",
+    "LICENSE-BOSL"
+  ],
+  "module": "zeos_orchard.js",
+  "types": "zeos_orchard.d.ts",
+  "sideEffects": false,
+  "keywords": [
+    "zeos"
+  ]
+}

@@ -259,45 +259,7 @@ class UALLogin extends React.Component {
     
     this.UalInformation.displayName = "UalInformation";
   }
-
-  public async initWallet() {
-    var sender = (await WalletManager.getInstance()).wallet;
-    var receiver = Wallet.new(
-      "This is the receiver wallets seed string. It must be at least 32 characters long!"
-    );
-
-    var auth = [{ actor: "newstock1dex", permission: "active" }];
-    var descs = [
-      {
-        action: {
-          account: "eosio.token",
-          name: "transfer",
-          authorization: auth,
-          data: '{"from":"newstock1dex", "to":"thezeostoken", "quantity":"1.0000 EOS", "memo":"miau"}',
-        },
-        zaction_descs: [],
-      },
-      {
-        action: {
-          account: "thezeostoken",
-          name: "exec",
-          authorization: [{ actor: "thezeostoken", permission: "active" }],
-          data: "",
-        },
-        zaction_descs: [
-          {
-            za_type: 1, //ZA_MINTFT,
-            to: sender.address(0),
-            d1: 10000,
-            d2: 1397703940,
-            sc: 6138663591592764928,
-            memo: "This is a test!",
-          },
-        ],
-      },
-    ];
-  }
-
+  
   public renderInfo() {
     return (
       <UALProvider

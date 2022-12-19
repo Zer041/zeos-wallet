@@ -3,8 +3,8 @@ import AddressBook from '../pages/address-book/AddressBook';
 import DashBoard from '../pages/dash-board/DashBoard';
 import Eos from '../pages/eos/Eos';
 import ReceiveHome from '../pages/receive/receive-home/ReceiveHome';
-import SendAnonimize from '../pages/send/anonymize/SendAnonymize';
-import SendDeAnonimize from '../pages/send/de-anonymize/SendDeAnonimize';
+import SendAnonymize from '../pages/send/anonymize/SendAnonymize';
+import SendDeAnonymize from '../pages/send/de-anonymize/SendDeAnonimize';
 import SendHome from '../pages/send/send-home/SendHome';
 import Transactions from '../pages/transactions/Transactions';
 import { AppRoutes } from './app-routes';
@@ -20,14 +20,16 @@ export const routes = [
     },
     {
         path: AppRoutes.Eos,
-        component: Eos,
+        children: [
+            { path: AppRoutes.Default, component: SendAnonymize },
+            { path: AppRoutes.Anonymize, component: SendAnonymize },
+            { path: AppRoutes.DeAnonymize, component: SendDeAnonymize },
+        ],
     },
     {
         path: AppRoutes.Send,
         children: [
             { path: AppRoutes.Default, component: SendHome },
-            { path: AppRoutes.Anonymize, component: SendAnonimize },
-            { path: AppRoutes.DeAnonymize, component: SendDeAnonimize },
         ],
     },
     {

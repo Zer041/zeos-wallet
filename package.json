@@ -28,7 +28,6 @@
     "node-polyfill-webpack-plugin": "^2.0.1",
     "random-words": "^1.2.0",
     "react": "^18.2.0",
-    "react-app-rewired": "^2.2.1",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-pro-sidebar": "^1.0.0-alpha.7",
@@ -71,5 +70,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-app-rewired": "^2.2.1"
   }
 }

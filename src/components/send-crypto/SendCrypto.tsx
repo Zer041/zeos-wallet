@@ -41,7 +41,7 @@ export default function SendCrypto(props: any) {
               marginTop: '1%',
             }}
             id="filled-basic"
-            label="U | T | Z address"
+            label="ZEOS Address"
             variant="outlined"
             color="primary"
             focused />
@@ -64,9 +64,26 @@ export default function SendCrypto(props: any) {
             renderInput={(params) =>
               <TextField
                 {...params}
-                label="Symbol"
+                label="Symbol/NFT"
                 focused />}
           />
+        </div>
+
+        <div style={{
+          paddingBottom: '1%',
+          width: '100%',
+          textAlign: 'left',
+        }}>
+          <TextField
+            style={{
+              width: '100%',
+              marginTop: '1%',
+            }}
+            id="filled-basic"
+            label="Amount/NFT Id"
+            variant="outlined"
+            color="primary"
+            focused />
         </div>
 
         <div style={{
